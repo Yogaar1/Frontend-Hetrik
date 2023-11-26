@@ -1,30 +1,26 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-// import Navbar from "./components/navbar";
-// import Footer from "./components/footer";
-
-import Homepage from "./pages/home page/Home";
-import About from "./pages/about page/About";
-import Service from "./pages/service page/Services";
+import Homepage from "./pages/home page/home";
+import About from "./pages/about page/about";
+import Service from "./pages/service page/services";
 import Article from "./pages/article page/Article";
 
 import Login from "./pages/login page/Login";
-import Signup from "./pages/register page/Register"
-
+import Signup from "./pages/register page/Register";
 
 const App = () => {
-    return (
-        <div>
-            <Routes>
-                <Route path="/" Component={Homepage}/>
-                <Route path="/About Us" Component={About}/>
-                <Route path="/Service" Component={Service}/>
-                <Route path="/Article" Component={Article}/>
-                <Route path="/Login" Component={Login}/>
-                <Route path="/SignUp" Component={Signup}/>
-            </Routes>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/About Us" element={<About />} />
+        <Route path="/Service" element={<Service />} />
+        <Route path="/Article" element={<Article />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<Signup />} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
